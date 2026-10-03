@@ -1,0 +1,90 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--orange:#ff7900;--blue:#1677ff;--green:#08783d;--dark:#07150f;--dark2:#0c2118;--white:#fff;--muted:#b9c8c0;--yellow:#ffd21c}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f8f6;color:#102019;line-height:1.55}
+body.modal-open{overflow:hidden}
+a{text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+.topbar{background:#07150f;color:#fff;border-bottom:1px solid rgba(255,255,255,.12);position:sticky;top:0;z-index:20}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:800;font-size:20px}.brand span{color:var(--blue)}.brand b{color:var(--orange)}
+.nav-contact{color:#fff;font-weight:700;border:1px solid rgba(255,255,255,.25);padding:9px 14px;border-radius:999px;transition:.2s}
+.nav-contact:hover{background:rgba(255,255,255,.1)}
+.hero{background:linear-gradient(135deg,#07150f,#0b2a1b);color:#fff;padding:82px 0 90px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.4fr .8fr;align-items:center;gap:60px}
+.badge,.eyebrow{display:inline-block;font-size:12px;font-weight:900;letter-spacing:1.5px;color:var(--yellow);margin-bottom:16px}
+h1{font-size:clamp(40px,6vw,70px);line-height:1.04;letter-spacing:-2px;margin-bottom:22px}
+h1 span{color:var(--blue)}h1 strong{color:var(--orange)}
+.lead{font-size:18px;color:#d5e1db;max-width:700px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;justify-content:center;align-items:center;padding:14px 20px;border-radius:10px;font-weight:800;transition:.2s;gap:8px}
+.btn:hover{transform:translateY(-2px)}
+.btn-icon{display:inline-block;vertical-align:middle;flex-shrink:0}
+.primary{background:var(--orange);color:#fff}.secondary{background:#fff;color:#0a1a12}
+.hero-card{position:relative;min-height:330px;border-radius:28px;background:linear-gradient(145deg,#0f7a42,#064524);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 25px 80px rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.12)}
+.card-glow{position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(255,121,0,.35);filter:blur(35px)}
+.sim{position:relative;width:145px;height:190px;border-radius:16px;background:linear-gradient(145deg,#ff7900,#ffad00);color:#fff;font-size:40px;font-weight:900;display:grid;place-items:center;box-shadow:12px 18px 35px rgba(0,0,0,.3);transform:rotate(6deg)}
+.hero-card p,.hero-card small{position:relative;margin-top:18px;font-weight:900;letter-spacing:1px}.hero-card small{margin-top:2px;color:#d9ffe9}
+.services{padding:85px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 45px}
+.section-head h2,.contact h2{font-size:clamp(30px,4vw,46px);line-height:1.1;margin-bottom:12px}.section-head p,.contact p{color:#607068}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.service{background:#fff;border:1.5px solid #e3ebe6;border-radius:18px;padding:25px;box-shadow:0 8px 30px rgba(15,45,30,.05);display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;outline:none}
+.service:hover{box-shadow:0 14px 35px rgba(15,45,30,.12);border-color:var(--orange);transform:translateY(-3px)}
+.service:focus-visible{border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,121,0,.25)}
+.service-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.icon{width:40px;height:40px;border-radius:12px;background:#e9f5ee;color:var(--green);display:grid;place-items:center;font-weight:900;font-size:13px;margin-bottom:0}
+.price-tag{display:inline-flex;align-items:center;background:#fff3e6;color:#d95b00;border:1px solid #ffd8b3;padding:4px 10px;border-radius:8px;font-size:12px;font-weight:900;letter-spacing:.3px}
+.price-tag.free{background:#e8f7ee;color:#08783d;border-color:#b9e8cb}
+.service h3{font-size:18px;margin-bottom:8px;line-height:1.25}
+.service p{color:#64736c;font-size:13.5px;flex-grow:1;margin-bottom:12px}
+.service-meta{background:#f4f7f5;border-radius:10px;padding:9px 11px;font-size:12px;margin-top:auto;border:1px solid #e7eee9}
+.meta-label{font-weight:800;color:#2c4035;margin-right:4px}
+.meta-value{color:#55665e;font-weight:600}
+.highlight{border-color:#ffcf8f;background:#fffaf4}
+.highlight:hover{border-color:var(--orange)}
+.service-action{display:flex;align-items:center;justify-content:space-between;margin-top:14px;padding-top:12px;border-top:1px dashed #e1eae4;font-size:13px;font-weight:800;color:var(--green);transition:color .2s ease}
+.service:hover .service-action{color:var(--orange)}
+.service-action .arrow{font-size:16px;transition:transform .2s ease}
+.service:hover .service-action .arrow{transform:translateX(4px)}
+.contact{padding:0 0 85px}.contact-box{background:#0b2117;color:#fff;border-radius:24px;padding:42px;display:flex;justify-content:space-between;align-items:center;gap:30px}.contact h2{margin-bottom:10px}.contact p{color:#c5d3cc;max-width:650px}
+.contact-actions{display:flex;flex-direction:column;align-items:center;gap:12px;min-width:230px}.phone{color:#fff;font-weight:900;font-size:20px;transition:.2s}.phone:hover{color:var(--yellow)}
+footer{background:#06120d;color:#c6d1cc;padding:28px 0}.footer{display:flex;justify-content:space-between;gap:20px;font-size:14px}.footer strong{color:#fff}.footer span{color:#9eaea6}
+
+/* Modal Demande de service */
+.modal-backdrop{position:fixed;inset:0;z-index:1000;background:rgba(7,21,15,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+.modal-backdrop.is-open{opacity:1;visibility:visible}
+.modal-dialog{background:#fff;border-radius:22px;width:min(520px,100%);max-height:calc(100vh - 32px);overflow-y:auto;box-shadow:0 25px 60px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.2);transform:translateY(18px) scale(.98);transition:transform .25s cubic-bezier(.16,1,.3,1)}
+.modal-backdrop.is-open .modal-dialog{transform:translateY(0) scale(1)}
+.modal-header{background:linear-gradient(135deg,#07150f,#0b2a1b);color:#fff;padding:24px 26px 20px;display:flex;justify-content:space-between;align-items:flex-start;position:relative;border-radius:22px 22px 0 0}
+.modal-header-content .badge{margin-bottom:6px;font-size:11px}
+.modal-header h2{font-size:23px;line-height:1.2;color:#fff}
+.modal-subtitle{color:#b9c8c0;font-size:13px;margin-top:3px}
+.modal-close-btn{background:rgba(255,255,255,.14);border:none;color:#fff;font-size:28px;line-height:1;width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s ease,transform .2s ease}
+.modal-close-btn:hover{background:rgba(255,255,255,.3);transform:rotate(90deg)}
+.modal-form{padding:24px 26px;display:flex;flex-direction:column;gap:18px}
+.service-pricing-box{background:#f6faf8;border:1.5px solid #dbe8e1;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.pricing-row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13.5px}
+.pricing-label{font-weight:700;color:#52645b}
+.pricing-value{font-weight:900;color:#0d261b;text-align:right}
+.pricing-value.is-free{color:#08783d;background:#e2f5ea;padding:2px 8px;border-radius:6px}
+.form-group{display:flex;flex-direction:column;gap:7px;text-align:left}
+.form-group label{font-size:13px;font-weight:800;color:#15291f;letter-spacing:.3px}
+.form-group label .required{color:#e53935;font-weight:900}
+.form-input{width:100%;padding:13px 15px;border-radius:12px;border:1.5px solid #d4ded8;font-size:15px;font-family:inherit;color:#0c2118;background:#fafcfa;transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;outline:none}
+.form-input:focus{border-color:var(--orange);background:#fff;box-shadow:0 0 0 3px rgba(255,121,0,.18)}
+.form-input.has-error{border-color:#e53935;background:#fff8f8;box-shadow:0 0 0 3px rgba(229,57,53,.15)}
+.select-wrapper{position:relative}
+.form-select{cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2308783d' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px;font-weight:700;color:#07150f}
+.form-error{font-size:12px;color:#e53935;font-weight:700;display:none}
+.form-error.active{display:block;margin-top:2px}
+.modal-actions{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.btn-whatsapp-action{background:#25d366;color:#fff;width:100%;border:none;font-size:15px;font-weight:800;padding:15px 20px;border-radius:12px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 8px 20px rgba(37,211,102,.25);transition:all .2s ease;font-family:inherit}
+.btn-whatsapp-action:hover{background:#20bd5a;transform:translateY(-2px);box-shadow:0 12px 25px rgba(37,211,102,.35)}
+.btn-whatsapp-action:active{transform:translateY(0)}
+.btn-call-modal{background:#f0f5f2;color:#0c2118;width:100%;border:1.5px solid #d2ded7;font-size:14px;font-weight:700;padding:12px 18px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all .2s ease}
+.btn-call-modal:hover{background:#e2ede6;border-color:#b8ccbf;color:#07150f;transform:translateY(-1px)}
+.modal-notice{font-size:12px;color:#76877f;text-align:center;margin-top:4px;line-height:1.45}
+
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-card{min-height:280px}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.nav{height:auto;padding:14px 0;align-items:flex-start}.nav-contact{font-size:12px;padding:8px 10px}.brand{font-size:16px}.hero{padding:55px 0 65px}h1{font-size:43px}.lead{font-size:16px}.actions,.actions .btn{width:100%}.grid{grid-template-columns:1fr}.contact-box{padding:30px 22px;display:block}.contact-actions{margin-top:25px;align-items:stretch}.contact-actions .btn,.phone{text-align:center}.footer{display:block}.footer>div+div{margin-top:12px}.modal-dialog{max-height:calc(100vh - 20px);border-radius:18px}.modal-header{padding:20px 20px 16px;border-radius:18px 18px 0 0}.modal-header h2{font-size:20px}.modal-form{padding:20px;gap:14px}.btn-whatsapp-action{font-size:14px;padding:14px 16px}}
